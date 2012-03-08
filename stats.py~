@@ -1,0 +1,13 @@
+from csv import DictReader
+theReader = DictReader(open('Squad-Attributes-18-Feb-2012.csv'),delimiter=',')
+idDict = {}
+count = 0
+date = '08032012'#change this to user input
+
+for lineDict in theReader:
+#    if count == 0:
+    stats = lineDict
+    idDict[count] = lineDict['Name']
+    count += 1
+
+print(idDict)
